@@ -3,7 +3,7 @@
 <html lang="en-ca">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Area of a Trapezoid, with JS" />
+    <meta name="description" content="Volume of a Pyramid, with JS" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Joanne Santhosh" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css" />
     <link rel="stylesheet" href="./css/style.css">
-    <title>Area of a Trapezoid, with JS</title>
+    <title>Volume of a Pyramid, with JS</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -25,18 +25,59 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Area of a Trapezoid, with JS</span>
+          <span class="mdl-layout-title">Volume of a Pyramid, with JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <table>
           <tr>
-        <th>
-          <img src="./Screenshot 2022-03-30 12.32.20.png" alt="trapezoid" width="250px" height="auto" />
-      </th>
-          </tr>
-        <h3>Formulas:</h3> 
-        <h4>A=[(a + b) /2] x h</h4>
-        <h5> Please enter the integers for the dimensions:</h5>
-    </body>
+            <th>
+              <h3>Formulas:</h3> 
+              <h4>V = (L x W x H) /3</h4>
+              <h5> Please enter the integers for the dimensions:</h5>
+              <!-- Numeric Textfield -->
+              <form action="#">
+                <p>length:</p>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length-of-pyramid">
+                  <label class="mdl-textfield__label" for="length-of-pyramid">enter length here...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+              </form>
+              <!-- Numeric Textfield -->
+              <form action="#">
+                <p>Width:</p>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width-of-pyramid">
+                  <label class="mdl-textfield__label" for="width-of-pyramid">enter width here...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+              </form>
+              <!-- Numeric Textfield -->
+              <form action="#">
+                <p>height:</p>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-of-pyramid">
+                  <label class="mdl-textfield__label" for="height-of-pyramid">enter height here...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+              </form>
+              <!-- Raised button with ripple -->
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">
+                Calculate
+              </button>
+              <br />
+              <p>
+                <div id="volume"></div>
+              </p>
+            </th>
+            <th>
+              <img src="./pyramid.png" alt="pyramid" width="250px" height="auto" />
+            </th>
+          </tr>          
+        </table>
+      </main>
+    </div>
+  </body>
 </html>
+    
